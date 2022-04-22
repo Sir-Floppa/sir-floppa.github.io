@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Ruda:400,900');
+
+* {
+    color: #1B2021;
+    font-family: 'Ruda', sans-serif;
+}
+
+body {
+    background-color: #C2A878;
+    background-image: url('/img/cream-pixels.png');
+    
+    text-align: center;
+}
+
+img {
+    width: 15%;
+    margin: 50px 0 auto;
+}
+
+h1 {
+    text-shadow: 0 0 3px #1b20216c ;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-top: 0;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: normal;
+}
+
+h4 {
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+p {
+    margin-top: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.rrss-icon {
+    font-size: 32px;
+}
+
+.rrss-icon:hover {
+    cursor: pointer
+}
