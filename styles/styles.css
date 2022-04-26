@@ -14,7 +14,7 @@ body {
 
 img {
     width: 15%;
-    margin: 30px 0 auto;
+    margin: 50px 0 auto;
 }
 
 h1 {
@@ -66,27 +66,90 @@ aside {
     border-radius: 5px;
 }
 
+.btn-section {
+    display: inline-flex;
+    height: 50px;
+}
+
+.skill-button {
+    text-decoration: none;
+    margin: auto 3px;
+}
+
+.skill-button h3 {
+    font-weight: bold;
+    letter-spacing: normal;
+    width: 180px;
+    background-color: #1B2021;
+    color: #C2A878;
+    padding: 10px 25px;
+    outline: dashed 3px #C2A878;
+    outline-offset: -5px;
+}
+
+.skill-button h3:hover {
+    animation: emphasize 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.skill-button h3:not(:hover) {
+    animation: un-emphasize 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes emphasize {
+    to {
+        outline-offset: 3px;
+        font-size: 22px;
+    }
+}
+
+@keyframes un-emphasize {
+    from {
+        outline-offset: 3px;
+        font-size: 22px;
+    }
+    to {
+        outline-offset: -5px;
+        font-size: 18px;
+    }
+}
+
 #home-logo {
     border-radius: 20px;
     padding-top: 165px
 }
 
-#home-logo:hover {
-    animation-name: bg-shadow;
-    animation-duration: 1s;
+#copy-message {
+    position: absolute;
+    background-color: #8e443d96;
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 10px;
+    border: solid 3px #1b20216c; 
+    display: none;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation-name: appearDisappear;
+    animation-duration: 2s;
 }
 
-#home-logo:not(:hover) {
-    animation-name: bg-shadow-leave;
-    animation-duration: 1s;
-}
-
-@keyframes bg-shadow {
-    from {background-color: none;}
-    to {background-color: #1b20216c;}
-}
-
-@keyframes bg-shadow-leave {
-    from {background-color: #1b20216c;}
-    to {background-color: none;}
+@keyframes appearDisappear {
+    0% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 1;
+    }
+    66% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
 }
