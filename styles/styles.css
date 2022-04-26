@@ -13,7 +13,7 @@ body {
 }
 
 img {
-    width: 15%;
+    width: 250px;
     margin: 50px 0 auto;
 }
 
@@ -69,6 +69,7 @@ aside {
 .btn-section {
     display: inline-flex;
     height: 50px;
+    width: max-content;
 }
 
 .skill-button {
@@ -117,6 +118,7 @@ aside {
     }
 }
 
+
 #home-logo {
     border-radius: 20px;
     padding-top: 165px
@@ -124,12 +126,12 @@ aside {
 
 #copy-message {
     position: absolute;
-    background-color: #8e443d96;
-    color: white;
+    background-color: #1B2021;
+    color: #C2A878;
     font-size: 12px;
-    padding: 5px;
-    border-radius: 10px;
-    border: solid 3px #1b20216c; 
+    padding: 10px 15px;
+    outline: dashed 2px #C2A878;
+    outline-offset: -3px;
     display: none;
     top: 0;
     left: 0;
@@ -151,5 +153,54 @@ aside {
     100% {
         opacity: 0;
         display: none;
+    }
+}
+
+/* Adjustments for mobile */
+@media only screen and (max-width: 600px) {
+    img {
+        width: 250px;
+        margin: 30px 0 auto;
+    }
+
+    .skill-button h3 {
+        font-weight: bold;
+        letter-spacing: normal;
+        width: 140px;
+        background-color: #1B2021;
+        color: #C2A878;
+        padding: 14px;
+        outline: dashed 3px #C2A878;
+        outline-offset: -5px;
+    }
+    
+    .skill-button h3:hover {
+        animation: emphasize 0.3s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+    }
+    
+    .skill-button h3:not(:hover) {
+        animation: un-emphasize 0.3s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes emphasize {
+        to {
+            outline-offset: 3px;
+            font-size: 18px;
+        }
+    }
+    
+    @keyframes un-emphasize {
+        from {
+            outline-offset: 3px;
+            font-size: 18px;
+        }
+        to {
+            outline-offset: -5px;
+            font-size: 14px;
+        }
     }
 }
