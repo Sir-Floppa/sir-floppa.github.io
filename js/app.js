@@ -1,4 +1,24 @@
 
+// Called when page loads
+function onLoad() {
+    showProjects('game', gameList);
+    showProjects('web', webList);
+    showProjects('app', appList);
+    showProjects('music', musicList);
+
+    showSkills('lang', langList);
+    showSkills('tech', techList); 
+}
+
+// These manage the SkillBox
+function showSkillBox() {
+    skillBox.style.display='flex';
+}
+
+function hideSkillBox() {
+    skillBox.style.display='none';
+}
+
 // Copies mail to clipboard and calls showCopyMessage function
 function copyMailToClipboard() {
     navigator.clipboard.writeText('nicolas.donoso.ge@outlook.com')
@@ -35,6 +55,24 @@ function showProjects(type, list) {
     }
 }
 
+// Adds the skills to the correspondant table, table ID must be type-table
+function showSkills(type, list) {
+    let table = document.getElementById(type + '-table');
+
+    let fullMugIco = '<ion-icon name="cafe"></ion-icon>';
+    let emptyMugIco = '<ion-icon name="cafe-outline"></ion-icon>';
+
+    for (let i = 0;  i < list.length; i++) {
+        table.innerHTML += `
+        <tr>
+            <th>${ list[i].name }</th>
+            <td>
+                ${ fullMugIco.repeat(list[i].value) }${ emptyMugIco.repeat(5 - list[i].value) }
+            </td>
+        </tr>`;
+    }
+}
+
 // Here goes the lists with projects
 let gameList = [
     new Project('The Loreseeker', 'https://ldjam.com/events/ludum-dare/48/the-loreseeker'),
@@ -52,3 +90,23 @@ let appList = [
 let musicList = [
     new Project('VS Screwy OST', 'https://www.youtube.com/playlist?list=PLEj465H0RF8Xp-5qaTQ-xTuKtt6K0BQ17')
 ]
+
+// Here goes the lists with skills
+let langList = [
+    new Skill('HTML', 4),
+    new Skill('CSS', 3),
+    new Skill('JS', 4),
+    new Skill('Python', 4),
+    new Skill('Markdown', 5),
+    new Skill('C#', 3)
+]
+
+let techList = [
+    new Skill('Angular', 2),
+    new Skill('Unity', 3),
+    new Skill('Git/Github', 4),
+    new Skill('.NET', 3)
+]
+
+// Usable variables
+let skillBox = document.getElementById('skill-box');

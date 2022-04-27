@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Ruda:400,900');
 
 :root {
-    --dark-brow: #1B2021;
+    --dark-brown: #1B2021;
     --transparent-dark-brown: #1B20216C;
     --light-brown: #C2A878;
 }
 
 * {
-    color: var(--dark-brow);
+    color: var(--dark-brown);
     font-family: 'Ruda', sans-serif;
 }
 
@@ -70,7 +70,7 @@ p {
     font-weight: bold;
     letter-spacing: normal;
     width: 180px;
-    background-color: var(--dark-brow);
+    background-color: var(--dark-brown);
     color: var(--light-brown);
     padding: 8px 25px;
     outline: dashed 3px var(--light-brown);
@@ -121,7 +121,7 @@ p {
 
 #copy-message {
     position: absolute;
-    background-color: var(--dark-brow);
+    background-color: var(--dark-brown);
     color: var(--light-brown);
     font-size: 12px;
     padding: 10px 15px;
@@ -133,6 +133,55 @@ p {
     opacity: 0;
     animation-name: appearDisappear;
     animation-duration: 2s;
+}
+
+#skill-box {
+    background-color: var(--dark-brown);
+    outline: dashed 3px var(--light-brown);
+    outline-offset: -5px;
+    padding: 14px;
+    width: 444px;
+    height: 230px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: left;
+    display: none;
+    margin-top: 2px;
+}
+
+#skill-box h4 {
+    color: var(--light-brown);
+    margin: 10px 20px;
+}
+
+#skill-box table {
+    margin-left: 10px;
+}
+
+#skill-box table th {
+    color: var(--light-brown);
+    font-size: 14px;
+    text-align: center;
+    height: 25px;
+}
+
+#skill-box table th ion-icon {
+    color: var(--light-brown);
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+#skill-box table td ion-icon {
+    color: var(--light-brown);
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+#skill-box div  {
+    margin: 0 auto;
 }
 
 @keyframes appearDisappear {
@@ -162,7 +211,7 @@ p {
         font-weight: bold;
         letter-spacing: normal;
         width: 155px;
-        background-color: var(--dark-brow);
+        background-color: var(--dark-brown);
         color: var(--light-brown);
         padding: 14px;
         outline: dashed 3px var(--light-brown);
@@ -193,6 +242,10 @@ p {
             padding: 12px 14px;
         }
     }
+
+    #skill-box {
+        width: 350px;
+    }
     
     @keyframes un-emphasize {
         from {
@@ -205,5 +258,25 @@ p {
             font-size: 14px;
             padding: 14px;
         }
+    }
+
+    #skill-box {
+        padding: 7px;
+        width: 364px;
+    }
+    
+    #skill-box h4 {
+        margin: 10px 5px;
+    }
+    
+    #skill-box table th {
+        font-size: 12px;
+        text-align: center;
+        height: 25px;
+    }
+    
+    #skill-box table td ion-icon {
+        font-size: 16px;
+        vertical-align: middle;
     }
 }
