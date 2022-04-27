@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Ruda:400,900');
 
+:root {
+    --dark-brow: #1B2021;
+    --transparent-dark-brown: #1B20216C;
+    --light-brown: #C2A878;
+}
+
 * {
-    color: #1B2021;
+    color: var(--dark-brow);
     font-family: 'Ruda', sans-serif;
 }
 
 body {
-    background-color: #C2A878;
+    background-color: var(--light-brown);
     background-image: url('/img/cream-pixels.png');
     
     text-align: center;
@@ -18,7 +24,7 @@ img {
 }
 
 h1 {
-    text-shadow: 0 0 3px #1b20216c ;
+    text-shadow: 0 0 3px var(--transparent-dark-brown);
 }
 
 h2 {
@@ -41,29 +47,12 @@ p {
     margin-top: 0;
 }
 
-ul {
-    list-style: none;
-}
-
 .rrss-icon {
     font-size: 32px;
 }
 
 .rrss-icon:hover {
     cursor: pointer;
-}
-
-aside {
-    float: right;
-    background-color: #1b20216c;
-    padding: 15px;
-    text-align: left;
-    width: 30%;
-    height: 88%;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    border-radius: 5px;
 }
 
 .btn-section {
@@ -81,10 +70,10 @@ aside {
     font-weight: bold;
     letter-spacing: normal;
     width: 180px;
-    background-color: #1B2021;
-    color: #C2A878;
-    padding: 10px 25px;
-    outline: dashed 3px #C2A878;
+    background-color: var(--dark-brow);
+    color: var(--light-brown);
+    padding: 8px 25px;
+    outline: dashed 3px var(--light-brown);
     outline-offset: -5px;
 }
 
@@ -101,9 +90,15 @@ aside {
 }
 
 @keyframes emphasize {
+    from {
+        outline-offset: -5px;
+        font-size: 18px;
+        padding: 10px 25px;
+    }
     to {
         outline-offset: 3px;
         font-size: 22px;
+        padding: 8px 25px;
     }
 }
 
@@ -111,26 +106,26 @@ aside {
     from {
         outline-offset: 3px;
         font-size: 22px;
+        padding: 8px 25px;
     }
     to {
         outline-offset: -5px;
         font-size: 18px;
+        padding: 10px 25px;
     }
 }
 
-
 #home-logo {
     border-radius: 20px;
-    padding-top: 165px
 }
 
 #copy-message {
     position: absolute;
-    background-color: #1B2021;
-    color: #C2A878;
+    background-color: var(--dark-brow);
+    color: var(--light-brown);
     font-size: 12px;
     padding: 10px 15px;
-    outline: dashed 2px #C2A878;
+    outline: dashed 2px var(--light-brown);
     outline-offset: -3px;
     display: none;
     top: 0;
@@ -156,7 +151,7 @@ aside {
     }
 }
 
-/* Adjustments for mobile */
+/* Adjustments for mobile only */
 @media only screen and (max-width: 600px) {
     img {
         width: 250px;
@@ -166,11 +161,11 @@ aside {
     .skill-button h3 {
         font-weight: bold;
         letter-spacing: normal;
-        width: 150px;
-        background-color: #1B2021;
-        color: #C2A878;
+        width: 155px;
+        background-color: var(--dark-brow);
+        color: var(--light-brown);
         padding: 14px;
-        outline: dashed 3px #C2A878;
+        outline: dashed 3px var(--light-brown);
         outline-offset: -5px;
     }
     
@@ -187,9 +182,15 @@ aside {
     }
     
     @keyframes emphasize {
+        from {
+            outline-offset: -5px;
+            font-size: 14px;
+            padding: 14px;
+        }
         to {
             outline-offset: 3px;
             font-size: 18px;
+            padding: 12px 14px;
         }
     }
     
@@ -197,10 +198,12 @@ aside {
         from {
             outline-offset: 3px;
             font-size: 18px;
+            padding: 12px 14px;
         }
         to {
             outline-offset: -5px;
             font-size: 14px;
+            padding: 14px;
         }
     }
 }

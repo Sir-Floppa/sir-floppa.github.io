@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="icon" href="./img//floppa-logo.png">
 </head>
-<body>
+<body onload="showProjects('game', gameList); showProjects('web', webList); showProjects('app', appList); showProjects('music', musicList)">
     <a href="/index.html" id="home-logo">
         <img src="/img/floppa-logo.png" alt="Logo">
     </a>
@@ -26,12 +26,12 @@
 
     <div class="btn-section">
         <a href="#" class="skill-button">
-            <h3>
+            <h3 class="skill-button">
                 Mis Habilidades
             </h3>
         </a>
         <a href="#" class="skill-button">
-            <h3>
+            <h3 class="skill-button">
                 Sobre mí
             </h3>
         </a>
@@ -40,26 +40,22 @@
     <h4>
         Juegos
     </h4>
+    <p id="game-section"></p>
 
-    <p>
-        <a href="https://ldjam.com/events/ludum-dare/48/the-loreseeker" target="_blank">The Loreseeker</a>
-         - 
-        <a href="https://jocrod.itch.io/dual-hell" target="_blank">Dual Hell</a>
-    </p>
+    <h4>
+        Web
+    </h4>
+    <p id="web-section"></p>
 
     <h4>
         Aplicaciones
     </h4>
-    <p>
-        <a href="https://github.com/Sir-Floppa/KanMark-I"target="_blank" >KanMark I</a>
-    </p>
+    <p id="app-section"></p>
 
     <h4>
         Música
     </h4>
-    <p>
-        <a href="https://www.youtube.com/playlist?list=PLEj465H0RF8Xp-5qaTQ-xTuKtt6K0BQ17"target="_blank" >VS Screwy OST</a>
-    </p>
+    <p id="music-section"></p>
 
     <h4>
         Contacto
@@ -73,9 +69,11 @@
         </div>
     </p>
     
+    <!-- Imports from the js folder -->
+    <script src="./js/Project.js"></script>
     <script src="./js/app.js"></script>
 
-    <!-- Import of IonIcons -->
+    <!-- Imports of IonIcons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
