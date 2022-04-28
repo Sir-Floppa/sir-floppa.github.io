@@ -375,5 +375,9 @@ span {
             width: 364px;
         }
     }
+
+    #about-box {
+        animation: appear-left 1s;
+    }
     
 }
