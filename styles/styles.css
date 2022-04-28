@@ -16,6 +16,8 @@ body {
     background-image: url('/img/cream-pixels.png');
     
     text-align: center;
+
+    overflow: hidden;
 }
 
 img {
@@ -45,6 +47,10 @@ h4 {
 
 p {
     margin-top: 0;
+}
+
+span {
+    cursor: pointer;
 }
 
 .rrss-icon {
@@ -88,6 +94,7 @@ p {
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
+
 
 @keyframes emphasize {
     from {
@@ -150,6 +157,8 @@ p {
     text-align: left;
     display: none;
     margin-top: 2px;
+    animation: appear-left 1s;
+    animation-timing-function: cubic-bezier();
 }
 
 #skill-box h4 {
@@ -168,20 +177,89 @@ p {
     height: 25px;
 }
 
-#skill-box table th ion-icon {
-    color: var(--light-brown);
-    font-size: 25px;
-    vertical-align: middle;
-}
-
 #skill-box table td ion-icon {
     color: var(--light-brown);
     font-size: 20px;
     vertical-align: middle;
 }
 
+#skill-box table td {
+    height: 24px;
+}
+
+#skill-box table td .wrapper {
+    animation: typing 1.5s;
+    animation-delay: 0.5s;
+    animation-timing-function: ease-in-out;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    text-align: left;
+}
+
 #skill-box div  {
     margin: 0 auto;
+    animation: fade-in 1.5s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes appear-left {
+    0% {
+        height: 0;
+        width: 0;
+    }
+    50% {
+        height: 230px;
+        width: 0;
+    }
+    100% {
+        width: 444px;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    25% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
+#about-box {
+    background-color: var(--dark-brown);
+    outline: dashed 3px var(--light-brown);
+    outline-offset: -5px;
+    padding: 14px;
+    width: 444px;
+    height: 230px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: left;
+    display: none;
+    margin-top: 2px;
+    animation: appear-left 1s;
+    animation-timing-function: cubic-bezier();
 }
 
 @keyframes appearDisappear {
@@ -244,6 +322,10 @@ p {
     }
 
     #skill-box {
+        width: 350px;
+    }
+
+    #about-box {
         width: 350px;
     }
     

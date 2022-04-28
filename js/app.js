@@ -19,6 +19,15 @@ function hideSkillBox() {
     skillBox.style.display='none';
 }
 
+// These manage the AboutBox
+function showAboutBox() {
+    aboutBox.style.display='flex';
+}
+
+function hideAboutBox() {
+    aboutBox.style.display='none';
+}
+
 // Copies mail to clipboard and calls showCopyMessage function
 function copyMailToClipboard() {
     navigator.clipboard.writeText('nicolas.donoso.ge@outlook.com')
@@ -67,7 +76,9 @@ function showSkills(type, list) {
         <tr>
             <th>${ list[i].name }</th>
             <td>
+                <div class='wrapper'>
                 ${ fullMugIco.repeat(list[i].value) }${ emptyMugIco.repeat(5 - list[i].value) }
+                </div>
             </td>
         </tr>`;
     }
@@ -110,3 +121,4 @@ let techList = [
 
 // Usable variables
 let skillBox = document.getElementById('skill-box');
+let aboutBox = document.getElementById('about-box');
